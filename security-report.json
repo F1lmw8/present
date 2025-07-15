@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-07-09T01:55:31.221322",
+  "total_files_scanned": 3,
+  "vulnerabilities_found": 7,
+  "severity_breakdown": {
+    "high": 3,
+    "medium": 3,
+    "low": 1
+  },
+  "details": [
+    {
+      "type": "sql_injection",
+      "file": "/Users/nongfilm/Desktop/warppersent/security-scanner.py",
+      "line": 36,
+      "severity": "high",
+      "description": "Potential SQL injection through string concatenation",
+      "code_snippet": "SELECT|INSERT|UPDATE|DELETE).*\\+.*\\+"
+    },
+    {
+      "type": "insecure_eval",
+      "file": "/Users/nongfilm/Desktop/warppersent/security-scanner.py",
+      "line": 43,
+      "severity": "high",
+      "description": "Use of eval() function can lead to code injection",
+      "code_snippet": "eval("
+    },
+    {
+      "type": "insecure_eval",
+      "file": "/Users/nongfilm/Desktop/warppersent/security-scanner.py",
+      "line": 164,
+      "severity": "high",
+      "description": "Use of eval() function can lead to code injection",
+      "code_snippet": "eval("
+    },
+    {
+      "type": "insecure_protocol",
+      "file": "/Users/nongfilm/Desktop/warppersent/security-scanner.py",
+      "line": 61,
+      "severity": "low",
+      "description": "Insecure HTTP protocol usage",
+      "code_snippet": "http://"
+    },
+    {
+      "type": "missing_input_validation",
+      "file": "/Users/nongfilm/Desktop/warppersent/landing-page.html",
+      "line": 334,
+      "severity": "medium",
+      "description": "Input field without validation attributes",
+      "code_snippet": "<input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your full name\" required>"
+    },
+    {
+      "type": "missing_input_validation",
+      "file": "/Users/nongfilm/Desktop/warppersent/landing-page.html",
+      "line": 339,
+      "severity": "medium",
+      "description": "Input field without validation attributes",
+      "code_snippet": "<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\" required>"
+    },
+    {
+      "type": "missing_input_validation",
+      "file": "/Users/nongfilm/Desktop/warppersent/landing-page.html",
+      "line": 344,
+      "severity": "medium",
+      "description": "Input field without validation attributes",
+      "code_snippet": "<input type=\"text\" id=\"company\" name=\"company\" placeholder=\"Your company name\">"
+    }
+  ]
+}
